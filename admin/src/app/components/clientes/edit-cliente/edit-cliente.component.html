@@ -30,7 +30,7 @@
                         <div class="row">
                             <div class="col-md-4 form-group">
                                 <label for="validationCustom01" class="form-label">Nombres</label>
-                                <input class="form-control" type="text" placeholder="Nombres"  required name="nombre" [(ngModel)]="cliente.nombres">
+                                <input class="form-control" type="text" placeholder="Nombres"  required name="nombre" [(ngModel)]="cliente.nombre">
                             </div>
                             <div class="col-md-4 form-group">
                                 <label for="validationCustom01" class="form-label">Apellidos</label>
@@ -68,9 +68,11 @@
                     </div>
                     <div class="card-body" *ngIf="cliente == undefined">
                            <h3 class="text-center">no se encontro el registro</h3>
+                           <div class="row">
                            <div class="col-3 mx-auto">
                            <img src="assets/img/advertencia.png" style="width: 100%;">
                            </div>
+                        </div>
                     </div>
                    </ng-container>
 

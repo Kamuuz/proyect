@@ -15,6 +15,7 @@ export class EditClienteComponent implements OnInit {
   public load_btn = false;
   public load_data = true;
   constructor(
+    
     private _route : ActivatedRoute,
     private _clienteService : ClienteService,
     private _adminService : AdminService,
@@ -49,7 +50,7 @@ export class EditClienteComponent implements OnInit {
     )
   }
 
-actualizar(updateForm: { valid: any; }){
+actualizar(updateForm:any){
   if (updateForm.valid) {
     this.load_btn = true;
     this._clienteService.actualizar_cliente_admin(this.id,this.cliente, this.token).subscribe(

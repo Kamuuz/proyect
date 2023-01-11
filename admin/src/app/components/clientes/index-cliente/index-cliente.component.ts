@@ -35,7 +35,7 @@ public load_data = true;
   }
 
   init_Data(){
-    this._clienteService.listar_clientes_filtro_admin(null,null,this.token).subscribe(
+    this._clienteService.listar_cliente_filtro_admin(null,null,this.token).subscribe(
       response=>{
         
         this.clientes = response.data;
@@ -54,7 +54,7 @@ filtro(tipo:any){
   if(tipo == 'apellidos'){
    if(this.filtro_apellidos){
     this.load_data = true;
-    this._clienteService.listar_clientes_filtro_admin(tipo,this.filtro_apellidos,this.token).subscribe(
+    this._clienteService.listar_cliente_filtro_admin(tipo,this.filtro_apellidos,this.token).subscribe(
       response=>{
         
         this.clientes = response.data;
@@ -72,7 +72,7 @@ filtro(tipo:any){
   }else if(tipo == 'correo'){
   if(this.filtro_correo){
     this.load_data = true;
-    this._clienteService.listar_clientes_filtro_admin(tipo,this.filtro_correo,this.token).subscribe(
+    this._clienteService.listar_cliente_filtro_admin(tipo,this.filtro_correo,this.token).subscribe(
       response=>{
         
         this.clientes = response.data;
